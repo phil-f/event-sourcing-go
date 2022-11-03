@@ -1,0 +1,11 @@
+{{define "form-check-in"}}
+{{template "header" .}}
+<form action="{{printf "/Home/CheckIn/%s" .ID}}" method="post"><input id="Id" name="Id" type="hidden" value="{{print .ID}}" />
+
+    <input id="Version" name="Version" type="hidden" value="{{print .Version}}" />
+        Number:<input id="Number" name="Number" type="text" value="" /><br />
+    <button name="submit">Submit</button>
+
+</form>
+{{template "footer" .}}
+{{end}}

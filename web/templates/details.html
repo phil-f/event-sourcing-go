@@ -1,0 +1,13 @@
+{{define "details"}}
+{{template "header" .}}
+<h2>Details:</h2>
+Id: {{print .ID}} <br />
+Name: {{.Name}}<br />
+Count: {{.Count}}<br /><br />
+
+<a href="{{printf "/Home/Rename/%s" .ID}}">Rename</a><br />
+<a href="{{printf "/Home/Deactivate/%s?Version=%s" .ID .Version}}">Deactivate</a><br />
+<a href="{{printf "/Home/CheckIn/%s" .ID}}">Check in</a><br />
+<a href="{{printf "/Home/Remove/%s?Version=%s" .ID .Version}}">Remove</a>
+{{template "footer" .}}
+{{end}}

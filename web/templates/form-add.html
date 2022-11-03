@@ -1,0 +1,11 @@
+{{define "form-add"}}
+{{template "header" .}}
+<form action="/Home/Add" method="post">
+
+	Name:<input id="Name" name="Name" type="text" value="" /><br />
+
+	<button name="submit">Submit</button>
+
+</form>
+{{template "footer" .}}
+{{end}}

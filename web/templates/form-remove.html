@@ -1,0 +1,11 @@
+{{define "form-remove"}}
+{{template "header" .}}
+<form action="{{printf "/Home/Remove/%s?Version=%s" .ID .Version}}" method="post"><input id="Id" name="Id" type="hidden" value="{{.ID}}" />
+
+    <input id="Version" name="Version" type="hidden" value="{{print .Version}}" />
+        Number:<input id="Number" name="Number" type="text" value="" /><br />
+    <button name="submit">Submit</button>
+
+</form>
+{{template "footer" .}}
+{{end}}
