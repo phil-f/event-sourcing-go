@@ -1,0 +1,9 @@
+{{define "form-rename"}}
+{{template "header" .}}
+<form action="{{printf "/Home/Rename/%s" .ID}}" method="post"><input id="Id" name="Id" type="hidden" value="{{print .ID}}" />
+	<input id="Version" name="Version" type="hidden" value="{{print .Version}}" />
+		Name:<input id="Name" name="Name" type="text" value="" /><br />
+	<button name="submit">Submit</button>
+</form>
+{{template "footer" .}}
+{{end}}
