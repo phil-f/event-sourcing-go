@@ -29,14 +29,14 @@ func (i *Item) Apply(event *event.Event) {
 }
 
 func (i *Item) Create(id uuid.UUID, name string) {
-	i.ApplyChange(i, event.NewEvent(&ItemCreated{id, name}))
+	i.ApplyChange(i, event.NewEvent(ItemCreated{id, name}))
 }
 
 func (i *Item) Deactivate() error {
 	if !i.activated {
 		return fmt.Errorf("unable to deactive item with id: %v as it is already deactivated", i.ID)
 	}
-	i.ApplyChange(i, event.NewEvent(&ItemDeactivated{i.ID}))
+	i.ApplyChange(i, event.NewEvent(ItemDeactivated{i.ID}))
 	return nil
 }
 
@@ -44,7 +44,7 @@ func (i *Item) Remove(count int) error {
 	if count <= 0 {
 		return fmt.Errorf("unable to remove %v items as the value is not above 0", count)
 	}
-	i.ApplyChange(i, event.NewEvent(&ItemsRemovedFromInventory{i.ID, count}))
+	i.ApplyChange(i, event.NewEvent(ItemsRemovedFromInventory{i.ID, count}))
 	return nil
 }
 
@@ -52,7 +52,7 @@ func (i *Item) CheckIn(count int) error {
 	if count <= 0 {
 		return fmt.Errorf("unable to check in %v items as the value is not above 0", count)
 	}
-	i.ApplyChange(i, event.NewEvent(&ItemsCheckedInToInventory{i.ID, count}))
+	i.ApplyChange(i, event.NewEvent(ItemsCheckedInToInventory{i.ID, count}))
 	return nil
 }
 
@@ -60,6 +60,6 @@ func (i *Item) Rename(newName string) error {
 	if newName == "" {
 		return errors.New("can't rename an inventory item to an empty string")
 	}
-	i.ApplyChange(i, event.NewEvent(&ItemRenamed{i.ID, newName}))
+	i.ApplyChange(i, event.NewEvent(ItemRenamed{i.ID, newName}))
 	return nil
 }
