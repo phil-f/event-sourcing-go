@@ -1,2 +1,2 @@
-# simplest-possible-thing-go
-go port of simplest possible thing @ https://github.com/gregoryyoung/m-r
+# event-sourcing-go
+go port of @ https://github.com/gregoryyoung/m-r
