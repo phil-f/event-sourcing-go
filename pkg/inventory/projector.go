@@ -1,8 +1,8 @@
 package inventory
 
 import (
+	"event-sourcing-go/pkg/event"
 	"fmt"
-	"spt-go/pkg/event"
 )
 
 type Projector struct {

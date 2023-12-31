@@ -1,14 +1,14 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.16-alpine
+FROM golang:1.21.5-alpine
 
 ADD . /app
 
-WORKDIR /app/cmd
+WORKDIR /app
 
 RUN apk add --no-cache bash
-RUN CGO_ENABLED=0 go build -o /simplest-possible-thing
+RUN CGO_ENABLED=0 go build -o /event-sourcing-go
 
 WORKDIR /app
 
-CMD [ "/simplest-possible-thing" ]
+CMD [ "/event-sourcing-go" ]

@@ -1,9 +1,9 @@
 package inventory
 
 import (
-	"spt-go/pkg/aggregate"
-	"spt-go/pkg/event"
-	"spt-go/pkg/uuid"
+	"event-sourcing-go/pkg/aggregate"
+	"event-sourcing-go/pkg/event"
+	"event-sourcing-go/pkg/uuid"
 )
 
 type InventoryRepository interface {

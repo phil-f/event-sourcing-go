@@ -1,14 +1,14 @@
 package main
 
 import (
+	"event-sourcing-go/pkg/api"
+	"event-sourcing-go/pkg/command"
+	"event-sourcing-go/pkg/event"
+	"event-sourcing-go/pkg/inventory"
+	"event-sourcing-go/pkg/templates"
 	"html/template"
 	"net/http"
 	"reflect"
-	"spt-go/pkg/api"
-	"spt-go/pkg/command"
-	"spt-go/pkg/event"
-	"spt-go/pkg/inventory"
-	"spt-go/pkg/templates"
 )
 
 func main() {

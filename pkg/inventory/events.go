@@ -1,7 +1,7 @@
 package inventory
 
 import (
-	"spt-go/pkg/uuid"
+	"event-sourcing-go/pkg/uuid"
 )
 
 type ItemDeactivated struct {

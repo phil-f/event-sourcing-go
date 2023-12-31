@@ -1,8 +1,8 @@
 package inventory
 
 import (
-	"spt-go/pkg/command"
-	"spt-go/pkg/uuid"
+	"event-sourcing-go/pkg/command"
+	"event-sourcing-go/pkg/uuid"
 )
 
 type InventoryItemService interface {

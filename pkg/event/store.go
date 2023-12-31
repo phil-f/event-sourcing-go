@@ -1,9 +1,9 @@
 package event
 
 import (
+	"event-sourcing-go/pkg/uuid"
 	"fmt"
 	"reflect"
-	"spt-go/pkg/uuid"
 )
 
 type EventStore interface {

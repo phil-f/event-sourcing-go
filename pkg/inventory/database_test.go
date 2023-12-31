@@ -1,8 +1,8 @@
 package inventory
 
 import (
+	"event-sourcing-go/pkg/uuid"
 	"reflect"
-	"spt-go/pkg/uuid"
 	"testing"
 )
 

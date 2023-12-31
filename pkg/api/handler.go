@@ -1,11 +1,11 @@
 package api
 
 import (
+	"event-sourcing-go/pkg/inventory"
+	"event-sourcing-go/pkg/templates"
+	"event-sourcing-go/pkg/uuid"
 	"net/http"
 	"path"
-	"spt-go/pkg/inventory"
-	"spt-go/pkg/templates"
-	"spt-go/pkg/uuid"
 	"strconv"
 )
 

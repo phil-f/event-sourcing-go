@@ -1,8 +1,8 @@
 package aggregate
 
 import (
-	"spt-go/pkg/event"
-	"spt-go/pkg/uuid"
+	"event-sourcing-go/pkg/event"
+	"event-sourcing-go/pkg/uuid"
 )
 
 type Handler interface {
